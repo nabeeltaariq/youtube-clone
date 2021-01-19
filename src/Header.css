@@ -1,8 +1,8 @@
 .header__logo {
   height: 25px;
-
   object-fit: contain;
   margin-left: 20px;
+  margin-right: 10px;
 }
 
 .header {
@@ -19,6 +19,7 @@
 .header__left {
   display: flex;
   justify-content: space-between;
+  margin-left: 10px;
 }
 
 .header__center {
@@ -26,6 +27,7 @@
   align-items: center;
   width: 40%;
   border: 1px solid lightgray;
+  flex: 1;
 }
 .header__center > input {
   flex: 1;
@@ -45,5 +47,5 @@
 }
 
 .header__icon {
-  margin-right: 8px;
+  margin-right: 20px;
 }

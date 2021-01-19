@@ -1,12 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Header.css'
 import MenuIcon from '@material-ui/icons/Menu'
-import NotificationsIcon from '@material-ui/icons/Notifications'
-import VideoCallIcon from '@material-ui/icons/VideoCall'
 import SearchIcon from '@material-ui/icons/Search'
+import VideoCallIcon from '@material-ui/icons/VideoCall'
 import AppsIcon from '@material-ui/icons/Apps'
-import { Avatar } from '@material-ui/core'
+import NotificationsIcon from '@material-ui/icons/Notifications'
+import Avatar from '@material-ui/core/Avatar'
+import { Link } from 'react-router-dom'
 function Header() {
+  const [inputSearch, setInputSearch] = useState('')
   return (
     <div className='header'>
       <div className='header__left'>
@@ -18,7 +20,15 @@ function Header() {
         />
       </div>
       <div className='header__center'>
-        <input type='text' />
+        <input
+          onChange={(e) => setInputSearch(e.target.value)}
+          value={inputSearch}
+          placeholder='Search'
+          type='text'
+        />
+        {/* <Link to={`/search/${inputSearch}`}>
+          <SearchIcon className='header__inputButton' />
+        </Link> */}
         <SearchIcon className='header__searchButton' />
       </div>
       <div className='header__right'>
